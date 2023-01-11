@@ -1,5 +1,5 @@
 import { Inter } from '@next/font/google'
-import HandleLogic from '../components/HandleLogic'
+import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 
 
@@ -9,12 +9,10 @@ export default function Home() {
 
   return (
     <>
-      <main className={styles.main}>
-        
-        <div>
-        <HandleLogic />
+    <Header/>
+    <div className={styles.main}>
+          <h1>HOME</h1>
         </div>
-      </main>
     </>
   )
 }
