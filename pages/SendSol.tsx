@@ -11,6 +11,7 @@ export default function SendSol() {
     const [balance, setBalance] = useState(0)
     const {connection} = useConnection()
     const {sendTransaction, publicKey} = useWallet()
+    const [link, setLink] = useState("")
     const handleChangeAmount = (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault()
         const result = e.currentTarget.value
@@ -46,7 +47,10 @@ export default function SendSol() {
         })
         transaction.add(instruction)
         sendTransaction(transaction,connection).then(sign => {
-            console.log(`Explorer URL: https://explorer.solana.com/tx/${sign}?cluster=devnet`)
+            return (
+               setLink(`https://explorer.solana.com/tx/${sign}?cluster=devnet`)
+            )
+            
         })
     }
 
