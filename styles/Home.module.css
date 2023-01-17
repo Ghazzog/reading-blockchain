@@ -11,11 +11,21 @@
   font-weight: 700;
 }
 
+.form {
+  display:inherit;
+margin: auto; 
+}
 .header{
+    justify-content: center;
   text-align: center;
   padding: 30px;
   background-color: darkslategray;
 }
+
+.buttonEdit {
+  float: right;   
+}
+
 .description {
   justify-content: center;
   align-items: center;
